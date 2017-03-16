@@ -317,8 +317,6 @@ namespace crnd
 #include <stdio.h>
 #ifdef WIN32
 #include <memory.h>
-#else
-#include <malloc.h>
 #endif
 #include <stdarg.h>
 #include <new> // needed for placement new, _msize, _expand

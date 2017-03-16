@@ -28,7 +28,22 @@ class Format(IntEnum):
 
 
 cdef extern from "crunch.h":
-	ctypedef int crn_format
+	cdef enum crn_format:
+		cCRNFmtInvalid = -1
+		cCRNFmtDXT1 = 0
+		cCRNFmtFirstValid = cCRNFmtDXT1
+		cCRNFmtDXT3
+		cCRNFmtDXT5
+		cCRNFmtDXT5_CCxY
+		cCRNFmtDXT5_xGxR
+		cCRNFmtDXT5_xGBR
+		cCRNFmtDXT5_AGBR
+		cCRNFmtDXN_XY
+		cCRNFmtDXN_YX
+		cCRNFmtDXT5A
+		cCRNFmtETC1
+		cCRNFmtTotal
+		cCRNFmtForceDWORD = 0xFFFFFFFF
 
 
 cdef extern from "crunch.h" namespace "crnd":
